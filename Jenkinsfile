@@ -27,7 +27,7 @@ pipeline {
 		// 	    sh "mvn clean compile"
 		// 	}
 		// }	
-
+		//
 		// stage('Test') {
 		// 	steps {
 		// 		sh "mvn test"
@@ -52,8 +52,8 @@ pipeline {
 			steps {
 				script {
 					docker.withRegistry('','dockerhub') {
-					dockerImage.push();
-					dockerImage.push('latest');
+						dockerImage.push();
+						dockerImage.push('latest');
 					}
 				}
 			}
